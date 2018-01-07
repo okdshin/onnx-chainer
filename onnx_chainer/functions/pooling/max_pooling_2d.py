@@ -17,7 +17,7 @@ def convert_MaxPooling2D(
         return helper.make_node(
             layer_name, input_names, out_names,
             kernel_shape=(func.kh, func.kw),
-            pads=(func.ph, func.pw),
+            pads=(func.ph, func.pw, func.ph, func.pw),
             strides=(func.sy, func.sx)
         ),
     else:
